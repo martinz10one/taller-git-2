@@ -1,0 +1,236 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background: #e0f7fa;
+}
+
+.factura {
+  background: white;
+  padding: 0 30px 20px 30px;
+  margin: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-left: 50px solid #009688;
+  /* la franja vertical verde */
+
+}
+
+.encabezado__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.encabezado__container img {
+  position: relative;
+  width: 160px;
+  height: 260px;
+  margin-left: 40px;
+}
+
+.encabezado__container h1 {
+  font: bolder 50px/50px "Monospace", "sans-serif";
+  color: #00b8a9;
+  margin: 0;
+}
+
+.encabezado__fecha {
+  font: 400 14px/14px "Monospace", "sans-serif";
+  margin-left: 20px;
+
+  strong {
+    color: #00b8a9;
+    font-weight: bolder;
+  }
+}
+
+.encabezado__factura {
+  font: 400 14px/14px "Monospace", "sans-serif";
+
+  strong {
+    color: #00b8a9;
+    font-weight: bolder;
+     /* mueve N° Factura un poco a la izquierda */
+    
+  }
+}
+
+.encabezado__info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 16px;
+}
+
+.info {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 32px;
+
+  strong {
+    color: #00b8a9;
+    font: bold 28px/28px system-ui, sans-serif;
+  }
+}
+
+.info .info__cliente {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.info .info__metodo-pago {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+
+
+  strong {
+    font: bold 16px/16px system-ui, sans-serif;
+  }
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.table {
+  background-color: #d8d5d5b4;
+}
+
+
+
+
+
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background-color: #00b8a9;
+}
+
+.totales {
+  text-align: right;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 32px;
+  border-bottom: 3px solid #00b8a9;
+}
+
+.footer .footer__contacto {
+  margin-top: 16px;
+  max-width: 400px;
+}
+
+.footer .footer__agradecimiento {
+  color: #26978e;
+  font: bold 40px/40px "Monospace", sans-serif;
+}
+
+.footer__direccion {
+
+  text-align: center;
+  margin: 16px auto 16px auto;
+}
+
+.table,
+th,
+td {
+  border: none;
+  border-collapse: collapse;
+
+}
+
+.tr,
+td {
+  padding: 8px;
+  text-align: left;
+}
+
+.linea {
+  border-bottom: 3px solid #c2b9b9;
+  margin: 20px 0;
+
+}
+
+.span {
+  font-weight: bold;
+}
+
+
+
+@media (max-width: 950px) {
+  .factura {
+    width: 90%;
+    padding-right: 40px;
+    box-sizing: border-box;
+  }
+
+  body {
+    padding: 0;
+  }
+
+  @media(max-width: 620px) {
+    .encabezado__container img {
+      width: 120px;
+      height: 200px;
+      margin-left: 20px;
+    }
+
+    .encabezado__container h1 {
+      font-size: 30px;
+    }
+
+    .encabezado__fecha,
+    .encabezado__factura,
+    .encabezado__info {
+      font-size: 12px;
+    }
+
+    .info strong {
+      font-size: 20px;
+    }
+
+    th,
+    td {
+      font-size: 12px;
+      padding: 4px;
+    }
+  }
+
+  @media (max-width: 570px) {
+  .factura {
+    border-left: 0px solid #009688; /* borde verde más delgado */
+  }
+  .info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .info .info__metodo-pago {
+    align-items: flex-start;
+  }
+}
+}
+
+
